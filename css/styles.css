@@ -1,0 +1,85 @@
+#navbar {
+  background-color: black; }
+
+.answers {
+  margin-top: 10%; }
+
+.container {
+  width: 30%;
+  display: inline-block;
+  border: solid #015367 1px;
+  margin-left: 2%;
+  margin-bottom: 2%; }
+  .container .word {
+    color: #60B9CE; }
+  .container .score {
+    color: black; }
+  .container a {
+    text-decoration: none; }
+
+.word-likes {
+  border: solid #015367 2px;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 2%;
+  text-align: center; }
+
+.definition-wrapper {
+  text-align: center;
+  margin-top: 5%;
+  width: 90%;
+  margin-left: 5%; }
+
+.definitions {
+  border-radius: 30%;
+  display: inline-block;
+  border: solid #015367 1px;
+  margin-left: .5%;
+  margin-top: .5%; }
+  .definitions p {
+    font-size: 1.2em;
+    color: #4575D4;
+    padding: 5%; }
+
+.scorecard {
+  border: solid #015367 2px;
+  margin-top: 5%;
+  width: 80%;
+  height: 500px;
+  margin-left: 10%; }
+  .scorecard input {
+    font-size: 2em;
+    font-weight: bold; }
+  .scorecard .sector {
+    display: block; }
+  .scorecard .buttons {
+    margin-top: 5%;
+    width: 40%;
+    margin-left: 30%; }
+    .scorecard .buttons span {
+      margin-left: 60%; }
+    .scorecard .buttons .current-score {
+      font-size: 2em;
+      font-weight: bolder; }
+    .scorecard .buttons .other-buttons {
+      margin-top: 2%; }
+  .scorecard .double-score {
+    background-color: #FFD700; }
+  .scorecard .triple-score {
+    background-color: #B22222; }
+
+.letters {
+  width: 10%;
+  margin-left: 1%;
+  display: inline-block; }
+  .letters button {
+    margin-bottom: 10%; }
+  .letters input {
+    width: 100%;
+    margin-bottom: 10%; }
+  .letters span {
+    text-align: center;
+    padding-left: 30%;
+    margin-bottom: 2%;
+    font-weight: bold;
+    font-size: 2em; }
