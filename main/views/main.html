@@ -18,7 +18,15 @@
 </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<last-search></last-search>
+<last-search ng-show = '!firstSearch'></last-search>
+<div ng-show = 'firstSearch'class="greeting">
+  <p>
+"Welcome, you can get started by entering your scrabble letters and seeing all possible combinations,
+then you can get your the word's defintion, add up your score, and see your saved searches. Try with the combination <span ng-click = scrabbleMap('qwerty')><a>QWERTY</a></span>"
+<br>
+  -Charles
+</p>
+</div>
 <div class="answers">
   <div class = "container" ng-repeat="key in answers">
     <div class="wrapper">

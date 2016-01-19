@@ -5,7 +5,11 @@
     .module('scrabble')
     .controller('MainController', function ($scope,MainService) {
       $scope.lastSearch = localStorage.getItem('lastSearch');
-
+      if (!$scope.lastSearch) {
+        $scope.firstSearch = true;
+      }else{
+        $scope.firstSearch = false;
+      }
       $scope.score = localStorage.getItem('total');
       $scope.alertMe = function(){
         MainService.alertMe();

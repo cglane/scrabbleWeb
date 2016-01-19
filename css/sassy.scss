@@ -1,6 +1,15 @@
 #navbar{
   background-color: black;
+
 }
+.greeting{
+  width: 80%;
+  position: absolute;
+  left:10%;
+  top: 100px;
+  font-size: 3em;
+}
+
 .answers{
   margin-top: 10%;
 }
@@ -100,4 +109,7 @@ margin-bottom: 2%;
     font-weight: bold;
     font-size:2em;
   }
+}
+.blur{
+  filter: blur(10px);
 }
