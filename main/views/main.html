@@ -9,7 +9,7 @@
     <div class="form-group">
       <input type="text" class="form-control" ng-model = "string" placeholder="Search Scrabble Words">
     </div>
-    <button type="submit" ng-click = "scrabbleMap(string)" class="btn btn-default">Submit</button>
+    <button type="submit" ng-click = "scrabbleMap(string); firstSearch = false" class="btn btn-default">Submit</button>
   </form>
   <ul class="nav navbar-nav navbar-right">
     <li><a href="">Score: {{score}}</a></li>
@@ -22,7 +22,7 @@
 <div ng-show = 'firstSearch'class="greeting">
   <p>
 "Welcome, you can get started by entering your scrabble letters and seeing all possible combinations,
-then you can get your the word's defintion, add up your score, and see your saved searches. Try with the combination <span ng-click = scrabbleMap('qwerty')><a>QWERTY</a></span>"
+then you can get your the word's defintion, add up your score, and see your saved searches. Try with the combination <span ng-click = "scrabbleMap('qwerty'); firstSearch = !firstSearch"><a>QWERTY</a></span>"
 <br>
   -Charles
 </p>
