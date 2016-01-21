@@ -6,7 +6,20 @@
       $scope.score = localStorage.getItem('total');
       console.log($scope);
       $scope.arrayScores = ScoreCardServices.scoreObject($routeParams.focusId);
-      $scope.sum =0;
+      $scope.sum = 0;
+      //add up initial sum
+      _.each($scope.arrayScores,function(el){
+        $scope.sum += el.score
+      })
+      //set initial total
+      if(parseInt(localStorage.getItem('total'))){
+        $scope.score = parseInt(localStorage.getItem('total'));
+      }else{
+        $scope.score = 0;
+        localStorage.setItem('total',0);
+      }
+      console.log('score',typeof($scope.score))
+
       $scope.change=function(){
         var sum = 0;
         _.each($scope.arrayScores,function(el){

@@ -5,7 +5,8 @@
     .factory('LikesServices',function($http){
       var url = 'http://tiny-tiny.herokuapp.com/collections/scrabble1';
       var getLikes = function(el){
-        return $http.get(url);
+        var storedNames = JSON.parse(localStorage['words']);
+        return storedNames
       };
 
     return{

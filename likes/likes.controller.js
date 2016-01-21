@@ -2,8 +2,7 @@
   angular
     .module('likes')
     .controller('LikesController', function ($scope,LikesServices) {
-      LikesServices.getLikes().success(function(data){
-        $scope.data = data;
-      })
+        $scope.data = LikesServices.getLikes();
+        console.log($scope.data,'data')
     })
 })();

@@ -6,10 +6,18 @@
       var url = 'http://tiny-tiny.herokuapp.com/collections/scrabble1';
       var page ={
         onAddSearch:function(word){
-          return $http.post(url,word);
+          if(!localStorage.getItem('words')){
+            var words = [];
+            words[0] = word;
+            localStorage["words"] = JSON.stringify(words);
+          }else if(!_.contains(JSON.parse(localStorage['words']),word)){
+            var storedWords = JSON.parse(localStorage['words']);
+            storedWords.push(word);
+            localStorage["words"] = JSON.stringify(storedWords);
+          }
         },
         getLikedWords:function(word){
-          return $http.get(url);
+          return localStorage.getItem('likedArray');
         },
         containsWord:function(data,word){
                 if(!_.contains(data,word)&& word!==undefined){
